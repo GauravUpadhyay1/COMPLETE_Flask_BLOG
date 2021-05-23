@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block body %}
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">EDIT DEVELOPERS</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row mb-5">
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm"
+                                        action="/editdeveloper/{{sno}}" novalidate>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Developer Name</label>
+                                                    <input type="text" class="form-control" name="developername"
+                                                        id="name" placeholder="Name"
+                                                        value="{{developers.developer_name}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Developer Email</label>
+                                                    <input type="email" class="form-control" name="developeremail"
+                                                        id="email" placeholder="email"
+                                                        value="{{developers.developer_email}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Developer Image</label>
+                                                    <input type="text" class="form-control" name="developerimage"
+                                                        id="developerimage" placeholder="writers image"
+                                                        value="{{developers.developer_img}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Developer Right image</label>
+                                                    <input type="text" class="form-control" name="developerrightimage"
+                                                        id="developerrightimage" placeholder="Right image"
+                                                        value="{{developers.developer_img_right}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Developer Slug</label>
+                                                    <input type="text" class="form-control" name="developerslug"
+                                                        id="date" placeholder="Slug" value="{{developers.dev_slug}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Content</label>
+                                                    <textarea name="developercontent" class="form-control"
+                                                        id="developercontent" cols="30" rows="4"
+                                                        placeholder="Content">{{developers.developer_content}}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Submit" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-stretch">
+                                <div class="info-wrap w-100 p-5 img" style="background-image: url(images/img.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+{% endblock %}

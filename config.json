@@ -1,0 +1,17 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql://root:gaurav4u7@localhost/digitaltemplo",
+        "prod_uri": "mysql://root:gaurav4u7@localhost/digitaltemplo",
+        "fb_url": "https://facebook.com/idioticminds",
+        "tw_url": "https://twitter.com/gaurav",
+        "gmail-user": "gauravupadhyay1813051019@gmail.com",
+        "gmail-pass": "gaurav4u77",
+        "no_of_posts": 2,
+        "no_of_comments": 3,
+        "no_of_posts_blog_page": 2,
+        "username": "gaurav4u7",
+        "password": "gaurav4u7",
+        "upload_location": "E:\\Web Development\\Complete web development course\\projects\\project 10-flask_based\\static\\img"
+    }
+}

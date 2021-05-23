@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">TDT ADMIN PANEL</h2>
+            </div>
+        </div>
+        <div class="form-group">
+            <a href="/logout"><Button class="btn btn-secondary">Logout</Button></a>
+        </div>
+        <div class="row justify-content-center">
+            <h3 class="mb-4">DEVELOPERS</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Sno</th>
+                        <th scope="col">Developer Name</th>
+                        <th scope="col">Developer Slug</th>
+                        <th scope="col">Developer Email</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                {% for developer in developers %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{developer.sno}}</th>
+                        <td>{{developer.developer_name}}</td>
+                        <td>{{developer.developer_email}}</td>
+                        <td>{{developer.dev_slug}}</td>
+                        <td><a href="/editdeveloper/{{developer.sno}}"><button
+                                    class="btn btn-secondary">Edit</button></a></td>
+                        <td><a href="/deletedeveloper/{{developer.sno}}"><button
+                                    class="btn btn-secondary">Delete</button></a></td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+            <div class="form-group">
+                <a href="/editdeveloper/0"><Button class="btn btn-primary">New Developer</Button></a>
+            </div>
+        </div>
+</section>
+
+
+
+{% endblock %}

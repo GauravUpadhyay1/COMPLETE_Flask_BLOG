@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Intro Section-->
+<section class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="h3">Our Developers.</h2>
+                <p class="text-big">These are the project <strong>Developers and Writers</strong> of our posts</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% for developers in developers %}
+<section class="featured-posts no-padding-top">
+    <div class="container">
+        <!-- Post-->
+
+        <!-- fetch using jinja for loop -->
+
+        {% set fname = 'img/' + developers.developer_img %}
+        {% set rname = 'img/' + developers.developer_img_right %}
+        <div class="row d-flex align-items-stretch">
+            <div class="text col-lg-7">
+                <div class="text-inner d-flex align-items-center">
+                    <div class="content">
+                        <header class="post-header">
+                            <a href="/developerdetails/{{developers.dev_slug}}">
+                                <h2 class="h4">{{developers.developer_name}}</h2>
+                            </a>
+                        </header>
+                        <p>{{developers.developer_content[0:200]}}</p>
+                        <footer class="post-footer d-flex align-items-center"><a href="#"
+                                class="author d-flex align-items-center flex-wrap">
+                                <div class="avatar"><img src="{{ url_for('static',filename=fname)}}" alt="..."
+                                        class="img-fluid"></div>
+                                <div class="title"><span>{{developers.developer_email}}</span></div>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-lg-5"><img src="{{ url_for('static',filename=rname)}}" alt="..."></div>
+        </div>
+
+    </div>
+</section>
+{% endfor %}
+
+
+
+
+{% endblock %}

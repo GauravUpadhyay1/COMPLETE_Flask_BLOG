@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<!-- About Us -->
+<section class="latest-posts">
+    <div class="container">
+        <header>
+            <h1>About Us</h1>
+            <p class="text-big">These are some of the latest posts from our blog.</p>
+        </header>
+        <div class="row">
+            {% for about in about %}
+            <div class="post col-md-4">
+                {% set fname = 'img/' + about.about_img %}
+                <div class="post-thumbnail"><img src="{{ url_for('static',filename=fname)}}" alt="..."
+                        class="img-fluid">
+                </div>
+                <div class="post-details">
+                    <p class="text-muted">{{about.about_us_content}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

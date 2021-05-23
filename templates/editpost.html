@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block body %}
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">EDIT POSTS</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row mb-5">
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm"
+                                        action="/edit/{{sno}}" novalidate>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Writers Name</label>
+                                                    <input type="text" class="form-control" name="writersname" id="name"
+                                                        placeholder="Name" value="{{post.name}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Post Slug</label>
+                                                    <input type="text" class="form-control" name="slug" id="slug"
+                                                        placeholder="Slug" value="{{post.slug}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Writers Image</label>
+                                                    <input type="text" class="form-control" name="writersimage"
+                                                        id="writersimage" placeholder="writers image"
+                                                        value="{{post.writer_img}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Background image</label>
+                                                    <input type="text" class="form-control" name="backgroundimage"
+                                                        id="backgroundimage" placeholder="bg image"
+                                                        value="{{post.post_bg_img}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Right image</label>
+                                                    <input type="text" class="form-control" name="rightimage"
+                                                        id="rightimage" placeholder="Right image"
+                                                        value="{{post.post_right_img}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Date</label>
+                                                    <input type="date" class="form-control" name="date" id="date"
+                                                        placeholder="date" value="{{post.date}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="subject">Tagline</label>
+                                                    <input type="text" class="form-control" name="tagline" id="tagline"
+                                                        placeholder="Tagline" value="{{post.tagline}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Content</label>
+                                                    <textarea name="content" class="form-control" id="content" cols="30"
+                                                        rows="4" placeholder="Content">{{post.content}}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Submit" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-stretch">
+                                <div class="info-wrap w-100 p-5 img" style="background-image: url(images/img.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+{% endblock %}
